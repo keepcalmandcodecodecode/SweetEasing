@@ -1,0 +1,6 @@
+framework module SweetEasing {
+  umbrella header "SweetEasing-umbrella.h"
+
+  export *
+  module * { export * }
+}
