@@ -65,6 +65,7 @@ class ViewController: UIViewController {
         let valuesAndKeytimes = SweetEasing.valuesAndKeytimes(120,to:320,fps:60,duration:2.0,function:self.currentEasingFunction(newAnimation))
         basicAnimation.values = valuesAndKeytimes.values
         basicAnimation.keyTimes = valuesAndKeytimes.keytimes
+
         shapeForAnimation.layer.addAnimation(basicAnimation, forKey: "basic")
     }
     func currentEasingFunction(newAnimation:Int)->EasingFunction{
@@ -75,6 +76,8 @@ class ViewController: UIViewController {
                 return QuadEasing()
             case 2:
                 return CubicEasing()
+            case 3:
+                return QuartEasing()
             default:
                 return LinearEasing()
         }
