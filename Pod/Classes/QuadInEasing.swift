@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-public class QuadEasing:NSObject, EasingFunction {
+public class QuadInEasing:NSObject, EasingFunction {
     public func compute(t: CGFloat) -> CGFloat {
         return t*t
     }

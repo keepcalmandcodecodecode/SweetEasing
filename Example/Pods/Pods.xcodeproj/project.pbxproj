@@ -65,9 +65,9 @@
 		87165912578E674C9409A621A0FF21FF /* World+DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F4953F6E7D2BA1C72B639CC7D9A5EB9 /* World+DSL.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8C4CFA421C4C017B002BD36C /* SweetEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA411C4C017B002BD36C /* SweetEasing.swift */; };
 		8C4CFA441C4C01E8002BD36C /* LinearEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA431C4C01E8002BD36C /* LinearEasing.swift */; };
-		8C4CFA4C1C4C3A5F002BD36C /* QuadEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA4B1C4C3A5F002BD36C /* QuadEasing.swift */; };
-		8C4CFA501C4C3BD3002BD36C /* CubicEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA4F1C4C3BD3002BD36C /* CubicEasing.swift */; };
-		8C4CFA521C4C3CC3002BD36C /* QuartEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA511C4C3CC3002BD36C /* QuartEasing.swift */; };
+		8C4CFA4C1C4C3A5F002BD36C /* QuadInEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA4B1C4C3A5F002BD36C /* QuadInEasing.swift */; };
+		8C4CFA501C4C3BD3002BD36C /* CubicInEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA4F1C4C3BD3002BD36C /* CubicInEasing.swift */; };
+		8C4CFA521C4C3CC3002BD36C /* QuartInEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA511C4C3CC3002BD36C /* QuartInEasing.swift */; };
 		8D0BF52FF564A170A3D1DE28C27B233E /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA329B2CFA87E526DA6452FDD6BB26BC /* Poll.swift */; };
 		8D549E01DA1D5104335CCEABFF870005 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F567A0F84D52EF356BEDCB9F4C9AE7 /* Foundation.framework */; };
 		9187EEC2982DB82AD8D3A7001AA647D6 /* NMBExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2FEBA13C21B99B45C2553743F1295 /* NMBExceptionCapture.m */; };
@@ -277,9 +277,9 @@
 		8C36DB6F05615EC71278526272A72BAD /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4CFA411C4C017B002BD36C /* SweetEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetEasing.swift; sourceTree = "<group>"; };
 		8C4CFA431C4C01E8002BD36C /* LinearEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearEasing.swift; sourceTree = "<group>"; };
-		8C4CFA4B1C4C3A5F002BD36C /* QuadEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadEasing.swift; sourceTree = "<group>"; };
-		8C4CFA4F1C4C3BD3002BD36C /* CubicEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicEasing.swift; sourceTree = "<group>"; };
-		8C4CFA511C4C3CC3002BD36C /* QuartEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuartEasing.swift; sourceTree = "<group>"; };
+		8C4CFA4B1C4C3A5F002BD36C /* QuadInEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadInEasing.swift; sourceTree = "<group>"; };
+		8C4CFA4F1C4C3BD3002BD36C /* CubicInEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicInEasing.swift; sourceTree = "<group>"; };
+		8C4CFA511C4C3CC3002BD36C /* QuartInEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuartInEasing.swift; sourceTree = "<group>"; };
 		8F4953F6E7D2BA1C72B639CC7D9A5EB9 /* World+DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "World+DSL.h"; path = "Quick/DSL/World+DSL.h"; sourceTree = "<group>"; };
 		922B62E1B104DD877166B996B4606890 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929FDFE7C05D7BBF5060D429BF214EF4 /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
@@ -553,9 +553,9 @@
 			children = (
 				8C4CFA411C4C017B002BD36C /* SweetEasing.swift */,
 				8C4CFA431C4C01E8002BD36C /* LinearEasing.swift */,
-				8C4CFA4B1C4C3A5F002BD36C /* QuadEasing.swift */,
-				8C4CFA4F1C4C3BD3002BD36C /* CubicEasing.swift */,
-				8C4CFA511C4C3CC3002BD36C /* QuartEasing.swift */,
+				8C4CFA4B1C4C3A5F002BD36C /* QuadInEasing.swift */,
+				8C4CFA4F1C4C3BD3002BD36C /* CubicInEasing.swift */,
+				8C4CFA511C4C3CC3002BD36C /* QuartInEasing.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1052,10 +1052,10 @@
 			files = (
 				5B5872EFF6C8C20DA096398931047F8B /* SweetEasing-dummy.m in Sources */,
 				8C4CFA421C4C017B002BD36C /* SweetEasing.swift in Sources */,
-				8C4CFA521C4C3CC3002BD36C /* QuartEasing.swift in Sources */,
+				8C4CFA521C4C3CC3002BD36C /* QuartInEasing.swift in Sources */,
 				8C4CFA441C4C01E8002BD36C /* LinearEasing.swift in Sources */,
-				8C4CFA501C4C3BD3002BD36C /* CubicEasing.swift in Sources */,
-				8C4CFA4C1C4C3A5F002BD36C /* QuadEasing.swift in Sources */,
+				8C4CFA501C4C3BD3002BD36C /* CubicInEasing.swift in Sources */,
+				8C4CFA4C1C4C3A5F002BD36C /* QuadInEasing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
