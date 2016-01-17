@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SweetEasing
 class ViewController: UIViewController {
     var shapeForAnimation:UIView!
     var pageControl:UIPageControl!
@@ -58,13 +58,13 @@ class ViewController: UIViewController {
     }
     func showAnimation(newAnimation:Int){
         shapeForAnimation.layer.removeAllAnimations()
-        let basicAnimation = CABasicAnimation()
+        let basicAnimation = CAKeyframeAnimation()
         basicAnimation.keyPath = "position.x"
-        basicAnimation.fromValue = 120
-        basicAnimation.toValue = 320
-        basicAnimation.duration = 1
         basicAnimation.repeatCount = .infinity
-        basicAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.5, 0.0, 0.9, 0.7)
+        basicAnimation.duration = 2.0
+        let valuesAndKeytimes = SweetEasing.valuesAndKeytimes(120,to:320,fps:60,duration:2.0,function:LinearEasing())
+        basicAnimation.values = valuesAndKeytimes.values
+        basicAnimation.keyTimes = valuesAndKeytimes.keytimes
         shapeForAnimation.layer.addAnimation(basicAnimation, forKey: "basic")
 
 
