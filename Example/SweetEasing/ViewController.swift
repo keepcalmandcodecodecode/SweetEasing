@@ -62,12 +62,20 @@ class ViewController: UIViewController {
         basicAnimation.keyPath = "position.x"
         basicAnimation.repeatCount = .infinity
         basicAnimation.duration = 2.0
-        let valuesAndKeytimes = SweetEasing.valuesAndKeytimes(120,to:320,fps:60,duration:2.0,function:LinearEasing())
+        let valuesAndKeytimes = SweetEasing.valuesAndKeytimes(120,to:320,fps:60,duration:2.0,function:self.currentEasingFunction(newAnimation))
         basicAnimation.values = valuesAndKeytimes.values
         basicAnimation.keyTimes = valuesAndKeytimes.keytimes
         shapeForAnimation.layer.addAnimation(basicAnimation, forKey: "basic")
-
-
+    }
+    func currentEasingFunction(newAnimation:Int)->EasingFunction{
+        switch(newAnimation){
+            case 0:
+                return LinearEasing()
+            case 1:
+                return QuadEasing()
+            default:
+                return LinearEasing()
+        }
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()

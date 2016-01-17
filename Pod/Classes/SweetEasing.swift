@@ -29,8 +29,6 @@ public class SweetEasing{
 
         keytimes.append(1.0)
         values.append(to)
-        print(keytimes)
-        print(values)
         return (values,keytimes)
     }
 }
