@@ -34,8 +34,11 @@ class ViewController: UIViewController {
         leftSwipe.addTarget(self, action: "swipeLeft:")
         self.view.addGestureRecognizer(leftSwipe)
 
-
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.showAnimation(pageControl.currentPage)
     }
     func swipeRight(swipe:UIGestureRecognizer){
         if pageControl.numberOfPages == (pageControl.currentPage + 1){
@@ -43,7 +46,7 @@ class ViewController: UIViewController {
         } else {
             pageControl.currentPage = pageControl.currentPage + 1
         }
-
+        self.showAnimation(pageControl.currentPage)
     }
     func swipeLeft(swipe:UIGestureRecognizer){
         if pageControl.currentPage - 1 < 0 {
@@ -51,8 +54,21 @@ class ViewController: UIViewController {
         } else {
             pageControl.currentPage = pageControl.currentPage - 1
         }
+        self.showAnimation(pageControl.currentPage)
     }
+    func showAnimation(newAnimation:Int){
+        shapeForAnimation.layer.removeAllAnimations()
+        let basicAnimation = CABasicAnimation()
+        basicAnimation.keyPath = "position.x"
+        basicAnimation.fromValue = 120
+        basicAnimation.toValue = 320
+        basicAnimation.duration = 1
+        basicAnimation.repeatCount = .infinity
+        basicAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.5, 0.0, 0.9, 0.7)
+        shapeForAnimation.layer.addAnimation(basicAnimation, forKey: "basic")
 
+
+    }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         shapeForAnimation.frame = CGRectMake(0, 0, 100, 100)
