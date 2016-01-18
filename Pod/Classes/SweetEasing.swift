@@ -22,7 +22,7 @@ public class SweetEasing{
                 let timeStamp = (Float(index)*1.0/Float(stepsCount))
 
                 let computed = function.compute(CGFloat(timeStamp))
-                keytimes.append(computed)
+                keytimes.append(CGFloat(timeStamp))
                 values.append((to-from)*computed+from)
             }
         }

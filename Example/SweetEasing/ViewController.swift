@@ -65,9 +65,8 @@ class ViewController: UIViewController {
         let valuesAndKeytimes = SweetEasing.valuesAndKeytimes(120,to:320,fps:60,duration:2.0,function:self.currentEasingFunction(newAnimation))
         basicAnimation.values = valuesAndKeytimes.values
         basicAnimation.keyTimes = valuesAndKeytimes.keytimes
-
         shapeForAnimation.layer.addAnimation(basicAnimation, forKey: "basic")
-    }
+   }
     func currentEasingFunction(newAnimation:Int)->EasingFunction{
         switch(newAnimation){
             case 0:
@@ -78,6 +77,8 @@ class ViewController: UIViewController {
                 return CubicInEasing()
             case 3:
                 return QuartInEasing()
+            case 4:
+                return QuadOutEasing()
             default:
                 return LinearEasing()
         }
@@ -86,7 +87,6 @@ class ViewController: UIViewController {
         super.viewWillLayoutSubviews()
         shapeForAnimation.frame = CGRectMake(0, 0, 100, 100)
         shapeForAnimation.center = CGPoint(x:120,y: self.view.bounds.height/2.0)
-        
         pageControl.frame = CGRectMake(10,self.view.bounds.height-100,self.view.bounds.width-20,100)
     }
     override func didReceiveMemoryWarning() {
