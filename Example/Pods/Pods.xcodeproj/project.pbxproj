@@ -64,6 +64,7 @@
 		86DABE920F2113B8D96ED9E8C76390C1 /* HaveValidSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CDFD38206302BDD75F4CF1998D5DD4 /* HaveValidSnapshot.swift */; };
 		87165912578E674C9409A621A0FF21FF /* World+DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F4953F6E7D2BA1C72B639CC7D9A5EB9 /* World+DSL.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8C201EC11C4D1C92000A5290 /* QuadOutEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C201EC01C4D1C92000A5290 /* QuadOutEasing.swift */; };
+		8C201EC31C4D27D0000A5290 /* CubicOutEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C201EC21C4D27D0000A5290 /* CubicOutEasing.swift */; };
 		8C4CFA421C4C017B002BD36C /* SweetEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA411C4C017B002BD36C /* SweetEasing.swift */; };
 		8C4CFA441C4C01E8002BD36C /* LinearEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA431C4C01E8002BD36C /* LinearEasing.swift */; };
 		8C4CFA4C1C4C3A5F002BD36C /* QuadInEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA4B1C4C3A5F002BD36C /* QuadInEasing.swift */; };
@@ -276,6 +277,7 @@
 		899697610CD89ABF71B0C316A2B370ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		89BE051488D88C8017D80180D70DBBAB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C201EC01C4D1C92000A5290 /* QuadOutEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadOutEasing.swift; sourceTree = "<group>"; };
+		8C201EC21C4D27D0000A5290 /* CubicOutEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicOutEasing.swift; sourceTree = "<group>"; };
 		8C36DB6F05615EC71278526272A72BAD /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4CFA411C4C017B002BD36C /* SweetEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetEasing.swift; sourceTree = "<group>"; };
 		8C4CFA431C4C01E8002BD36C /* LinearEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearEasing.swift; sourceTree = "<group>"; };
@@ -559,6 +561,7 @@
 				8C4CFA4F1C4C3BD3002BD36C /* CubicInEasing.swift */,
 				8C4CFA511C4C3CC3002BD36C /* QuartInEasing.swift */,
 				8C201EC01C4D1C92000A5290 /* QuadOutEasing.swift */,
+				8C201EC21C4D27D0000A5290 /* CubicOutEasing.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1057,6 +1060,7 @@
 				8C4CFA421C4C017B002BD36C /* SweetEasing.swift in Sources */,
 				8C201EC11C4D1C92000A5290 /* QuadOutEasing.swift in Sources */,
 				8C4CFA521C4C3CC3002BD36C /* QuartInEasing.swift in Sources */,
+				8C201EC31C4D27D0000A5290 /* CubicOutEasing.swift in Sources */,
 				8C4CFA441C4C01E8002BD36C /* LinearEasing.swift in Sources */,
 				8C4CFA501C4C3BD3002BD36C /* CubicInEasing.swift in Sources */,
 				8C4CFA4C1C4C3A5F002BD36C /* QuadInEasing.swift in Sources */,

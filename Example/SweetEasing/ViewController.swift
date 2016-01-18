@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         pageControl = UIPageControl()
         pageControl.currentPage = 0
-        pageControl.numberOfPages = 5
+        pageControl.numberOfPages = 20
         pageControl.pageIndicatorTintColor = UIColor.darkGrayColor()
         pageControl.currentPageIndicatorTintColor = UIColor.lightGrayColor()
         self.view.addSubview(pageControl)
@@ -79,6 +79,8 @@ class ViewController: UIViewController {
                 return QuartInEasing()
             case 4:
                 return QuadOutEasing()
+            case 5:
+                return CubicOutEasing()
             default:
                 return LinearEasing()
         }
