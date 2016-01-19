@@ -67,6 +67,7 @@
 		8C201EC31C4D27D0000A5290 /* CubicOutEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C201EC21C4D27D0000A5290 /* CubicOutEasing.swift */; };
 		8C201EC51C4D40A7000A5290 /* QuartOutEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C201EC41C4D40A7000A5290 /* QuartOutEasing.swift */; };
 		8C201EC71C4D47FC000A5290 /* QuadInOutEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C201EC61C4D47FC000A5290 /* QuadInOutEasing.swift */; };
+		8C201EC91C4E9AD8000A5290 /* CubicInOutEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C201EC81C4E9AD8000A5290 /* CubicInOutEasing.swift */; };
 		8C4CFA421C4C017B002BD36C /* SweetEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA411C4C017B002BD36C /* SweetEasing.swift */; };
 		8C4CFA441C4C01E8002BD36C /* LinearEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA431C4C01E8002BD36C /* LinearEasing.swift */; };
 		8C4CFA4C1C4C3A5F002BD36C /* QuadInEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CFA4B1C4C3A5F002BD36C /* QuadInEasing.swift */; };
@@ -282,6 +283,7 @@
 		8C201EC21C4D27D0000A5290 /* CubicOutEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicOutEasing.swift; sourceTree = "<group>"; };
 		8C201EC41C4D40A7000A5290 /* QuartOutEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuartOutEasing.swift; sourceTree = "<group>"; };
 		8C201EC61C4D47FC000A5290 /* QuadInOutEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadInOutEasing.swift; sourceTree = "<group>"; };
+		8C201EC81C4E9AD8000A5290 /* CubicInOutEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicInOutEasing.swift; sourceTree = "<group>"; };
 		8C36DB6F05615EC71278526272A72BAD /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4CFA411C4C017B002BD36C /* SweetEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetEasing.swift; sourceTree = "<group>"; };
 		8C4CFA431C4C01E8002BD36C /* LinearEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearEasing.swift; sourceTree = "<group>"; };
@@ -568,6 +570,7 @@
 				8C201EC21C4D27D0000A5290 /* CubicOutEasing.swift */,
 				8C201EC41C4D40A7000A5290 /* QuartOutEasing.swift */,
 				8C201EC61C4D47FC000A5290 /* QuadInOutEasing.swift */,
+				8C201EC81C4E9AD8000A5290 /* CubicInOutEasing.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1067,6 +1070,7 @@
 				8C201EC11C4D1C92000A5290 /* QuadOutEasing.swift in Sources */,
 				8C4CFA521C4C3CC3002BD36C /* QuartInEasing.swift in Sources */,
 				8C201EC51C4D40A7000A5290 /* QuartOutEasing.swift in Sources */,
+				8C201EC91C4E9AD8000A5290 /* CubicInOutEasing.swift in Sources */,
 				8C201EC31C4D27D0000A5290 /* CubicOutEasing.swift in Sources */,
 				8C4CFA441C4C01E8002BD36C /* LinearEasing.swift in Sources */,
 				8C4CFA501C4C3BD3002BD36C /* CubicInEasing.swift in Sources */,

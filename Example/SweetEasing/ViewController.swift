@@ -85,6 +85,8 @@ class ViewController: UIViewController {
                 return QuartOutEasing()
             case 7:
                 return QuadInOutEasing()
+            case 8:
+                return CubicInOutEasing()
             default:
                 return LinearEasing()
         }
