@@ -34,5 +34,6 @@ public class SweetEasing{
 }
 public protocol EasingFunction{
     func compute(t:CGFloat)->CGFloat
+    func title()->String
 }
 

@@ -12,4 +12,7 @@ public class LinearEasing:NSObject, EasingFunction {
     public func compute(t: CGFloat) -> CGFloat {
         return t
     }
+    public func title() -> String {
+        return "Linear"
+    }
 }

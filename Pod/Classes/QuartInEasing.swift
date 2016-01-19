@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 public class QuartInEasing:NSObject, EasingFunction {
+    
     public func compute(t: CGFloat) -> CGFloat {
         return t*t*t*t
+    }
+    
+    public func title() -> String {
+        return "QuartIn"
     }
 }
