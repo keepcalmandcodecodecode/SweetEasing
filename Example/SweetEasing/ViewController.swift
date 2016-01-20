@@ -11,6 +11,7 @@ import SweetEasing
 class ViewController: UIViewController {
     var shapeForAnimation:UIView!
     var pageControl:UIPageControl!
+    var titleEasingFunction: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         shapeForAnimation = UIView()
@@ -19,10 +20,15 @@ class ViewController: UIViewController {
         
         pageControl = UIPageControl()
         pageControl.currentPage = 0
-        pageControl.numberOfPages = 20
+        pageControl.numberOfPages = 10
         pageControl.pageIndicatorTintColor = UIColor.darkGrayColor()
         pageControl.currentPageIndicatorTintColor = UIColor.lightGrayColor()
         self.view.addSubview(pageControl)
+        
+        titleEasingFunction = UILabel()
+        titleEasingFunction.textAlignment = .Center
+        titleEasingFunction.text = "Example"
+        self.view.addSubview(titleEasingFunction)
         
         let rightSwipe = UISwipeGestureRecognizer()
         rightSwipe.direction = UISwipeGestureRecognizerDirection.Right
@@ -62,7 +68,9 @@ class ViewController: UIViewController {
         basicAnimation.keyPath = "position.x"
         basicAnimation.repeatCount = .infinity
         basicAnimation.duration = 2.0
-        let valuesAndKeytimes = SweetEasing.valuesAndKeytimes(120,to:320,fps:60,duration:2.0,function:self.currentEasingFunction(newAnimation))
+        let easingFunction = self.currentEasingFunction(newAnimation)
+        titleEasingFunction.text = easingFunction.title()
+        let valuesAndKeytimes = SweetEasing.valuesAndKeytimes(120,to:320,fps:60,duration:2.0,function:easingFunction)
         basicAnimation.values = valuesAndKeytimes.values
         basicAnimation.keyTimes = valuesAndKeytimes.keytimes
         shapeForAnimation.layer.addAnimation(basicAnimation, forKey: "basic")
@@ -98,6 +106,7 @@ class ViewController: UIViewController {
         shapeForAnimation.frame = CGRectMake(0, 0, 100, 100)
         shapeForAnimation.center = CGPoint(x:120,y: self.view.bounds.height/2.0)
         pageControl.frame = CGRectMake(10,self.view.bounds.height-100,self.view.bounds.width-20,100)
+        titleEasingFunction.frame = CGRectMake(10,100,self.view.bounds.width-20,100)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
