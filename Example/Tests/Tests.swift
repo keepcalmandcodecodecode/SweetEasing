@@ -4,46 +4,17 @@ import Quick
 import Nimble
 import SweetEasing
 
-class TableOfContentsSpec: QuickSpec {
-    override func spec() {
-        describe("these will fail") {
-
-            it("can do maths") {
-                expect(1) == 2
-            }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    dispatch_async(dispatch_get_main_queue()) {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        NSThread.sleepForTimeInterval(0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
-                }
+class LinearEasingSpec: QuickSpec {
+    override func spec(){
+        var easingFunc:LinearEasing!
+        var valuesAndKeyframes:(values:[CGFloat],keytimes:[CGFloat])!
+        beforeEach {
+            easingFunc = LinearEasing()
+            valuesAndKeyframes = SweetEasing.valuesAndKeytimes(10, to: 20, fps: 30, duration: 2, function: easingFunc)
+        }
+        describe("all values between 0 and 1"){
+            it("first value is 0"){
+                expect(valuesAndKeyframes.keytimes.first) == 0
             }
         }
     }
