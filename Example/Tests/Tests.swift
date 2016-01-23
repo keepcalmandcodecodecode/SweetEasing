@@ -37,5 +37,11 @@ class EasingFuncsSpec: QuickSpec {
                 ["easing":QuadInEasing()]
             }
         }
+        describe("CubicIn easing: all keytimes between 0 and 1"){
+            itBehavesLike("all keytimes between 0 and 1"){
+                ["easing":CubicInEasing()]
+            }
+        }
+        
     }
 }
