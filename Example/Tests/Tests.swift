@@ -4,15 +4,11 @@ import Quick
 import Nimble
 import SweetEasing
 
-class LinearEasingSpec: QuickSpec {
-    override func spec(){
-        var easingFunc:LinearEasing!
-        var valuesAndKeyframes:(values:[CGFloat],keytimes:[CGFloat])!
-        beforeEach {
-            easingFunc = LinearEasing()
-            valuesAndKeyframes = SweetEasing.valuesAndKeytimes(10, to: 20, fps: 30, duration: 2, function: easingFunc)
-        }
-        describe("all keytimes between 0 and 1"){
+class EasingFuncSharedConfiguration: QuickConfiguration{
+    override class func configure(configuration: Configuration){
+        sharedExamples("all keytimes between 0 and 1"){(sharedExampleContext: SharedExampleContext) in
+            let easingFunc = sharedExampleContext()["easing"] as! EasingFunction
+            let valuesAndKeyframes = SweetEasing.valuesAndKeytimes(10, to: 20, fps: 30, duration: 2, function: easingFunc)
             it("first keytime is 0"){
                 expect(valuesAndKeyframes.keytimes.first) == 0
             }
@@ -22,9 +18,20 @@ class LinearEasingSpec: QuickSpec {
             it("all keytimes between 0 and 1"){
                 for keytime in valuesAndKeyframes.keytimes{
                     expect(keytime<=1 && keytime >= 0)
-
+                    
                 }
             }
         }
+    }
+}
+
+class EasingFuncsSpec: QuickSpec {
+    override func spec(){
+        describe("linear easing: all keytimes between 0 and 1"){
+            itBehavesLike("all keytimes between 0 and 1"){
+                ["easing":LinearEasing()]
+            }
+        }
+        
     }
 }
