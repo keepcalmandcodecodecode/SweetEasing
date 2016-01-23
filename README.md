@@ -9,6 +9,12 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+```swift
+let func = LinearEasing()
+let tStart = 0.5
+let tComputed = func.compute(t)
+```
+
 ## Requirements
 
 ## Installation
